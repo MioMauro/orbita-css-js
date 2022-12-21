@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background: black;
+    color: darkorange;
+    display: flex;
+    flex-direction: column;
+    padding: 200px 10px;
+}
+
+h1{
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+#square{
+    /*background: white;*/
+    position: relative;
+    margin: 0 auto;
+    height: 720px;
+    width: 1280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+span{
+    position: absolute;
+    background: transparent;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: spin linear infinite;
+}
+
+span div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+}
+
+@keyframes spin{
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
